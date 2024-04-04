@@ -6,7 +6,7 @@ import { IoTimeSharp } from "react-icons/io5";
 
 const Blog = () => {
   return (
-    <div className="w-full xl:h-screen h-auto xl:px-[70px] px-5 overflow-hidden xl:pt-5 pt-10 mb-5">
+    <div className="w-full xl:h-screen h-auto xl:px-[70px] px-5 overflow-hidden xl:pt-5 pt-10 mb-7">
       <div className="text-center">
         <h4 className="text-[#f9a826] font-semibold">Explore Our Blogs</h4>
         <h1 className="text-[#000d6b] font-bold text-3xl">Our Latest Blogs</h1>

@@ -26,7 +26,7 @@ const HeroSlider = () => {
         },
       }}
       modules={[Autoplay]}
-      className="mySwiper"
+      className="mySwiper xl:mt-[180px]"
     >
       <SwiperSlide>
         <div className="swiper_item1">

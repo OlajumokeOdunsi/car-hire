@@ -3,7 +3,7 @@ import "../findCar/FindCar.css";
 
 const FindCar = () => {
   return (
-    <div className="w-[90%] xl:h-[35vh] h-auto m-auto p-[30px] shadow-md flex flex-col xl:flex-row items-center gap-[50px] absolute xl:top-[130%] xl:left-[60px] top-[115%]  left-[20px] z-50 bg-white">
+    <div className="w-[90%] xl:h-[35vh] h-auto m-auto p-[30px] shadow-md flex flex-col xl:flex-row items-center gap-[50px] absolute xl:top-[120%] min-[320px]:top-[105%] xl:left-[60px] top-[115%]  left-[20px] z-20 bg-white">
       <div>
         <h1 className="text-[#000d6b] text-5xl w-[300px] min-[320px]:w-[270px] min-[320px]:text-4xl min-[414px]:text-5xl min-[414px]:w-[350px] font-semibold min-[360px]:w-[300px] min-[360px]:text-5xl min-[375px]:text-5xl min-[390px]:text-5xl min-[390px]:w-[320px] min-[375px]:w-[322px]">
           Find your best car here

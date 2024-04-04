@@ -1,0 +1,8 @@
+.slider_bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: linear-gradient(rgb(0, 13, 107, 0.5), rgb(0, 13, 107, 0.5)),
+    url("../assets/all-images/drive.jpg");
+  padding: 80px 0px;
+}
