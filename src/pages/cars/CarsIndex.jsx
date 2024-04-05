@@ -9,7 +9,7 @@ const CarsIndex = () => {
       <SliderBg title={"Cars"} />
       <div className="xl:px-[70px] h-auto pt-[50px]">
         <div className="flex items-center gap-3 xl:px-[70px] ml-[40px] min-[375px]:ml-[70px] min-[414px]:ml-[90px] min-[360px]:ml-[60px] min-[390px]:ml-[80px] xl:ml-0 ">
-          <div className="flex items-center gap-1 border xl:px-3 xl:py-1 shadow-sm ">
+          <div className="flex items-center gap-1 border xl:px-3 xl:py-1 shadow-sm px-2 py-1">
             <HiSortAscending
               className="pt-1 text-[#000d6b] font-semibold"
               size={20}
