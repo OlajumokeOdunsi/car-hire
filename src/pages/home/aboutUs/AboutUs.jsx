@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaCheck } from "react-icons/fa6";
 import bmw from "../../../assets/all-images/cars-img/bmw-offer.png";
 
+
 const AboutUs = () => {
   return (
-    <div className="w-full xl:h-screen h-auto xl:px-[70px] px-[25px] flex xl:flex-row flex-col justify-between gap-[40px] pt-[680px] min-[320px]:pt-[630px] min-[375px]:pt-[660px] xl:pt-[230px] min-[360px]:pt-[650px]">
+    <div
+      className="w-full xl:h-screen h-auto xl:px-[70px] px-[25px] flex xl:flex-row flex-col justify-between gap-[40px] pt-[680px] min-[320px]:pt-[630px] min-[375px]:pt-[660px] xl:pt-[230px] min-[360px]:pt-[650px]"
+    >
       <div className="flex-1">
         <h4 className="text-[#f9a826] text-2xl mb-2 font-semibold">About us</h4>
         <h1 className="text-4xl font-semibold mb-3 min-[320px]:text-3xl text-[#000d6b]">

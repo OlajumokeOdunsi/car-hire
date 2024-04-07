@@ -3,8 +3,27 @@ import BlogData from "../../../assets/data/BlogData";
 import { FaUserCircle } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoTimeSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
 
 const Blog = () => {
+  let menuRef = useRef();
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setShowNav(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
+  const handleScroll = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <div className="w-full xl:h-screen h-auto xl:px-[70px] px-5 overflow-hidden xl:pt-5 pt-10 mb-7">
       <div className="text-center">
@@ -14,15 +33,19 @@ const Blog = () => {
       <div className="grid xl:grid-cols-3 grid-cols-1 mt-8 gap-6 xl:gap-0">
         {BlogData.map((blog) => (
           <div key={blog.id} className="xl:w-[350px] h-auto">
-            <img className="w-[350px]" src={blog.imgUrl} alt="" />
+           <Link onClick={handleScroll} to={`/blogs/${blog.id}`}>
+           <img className="w-[350px]" src={blog.imgUrl} alt="" />
+           </Link>
             <div className="border border-gray-100 shadow-md p-2">
               <h4 className="text-[#000d6b] font-semibold mb-2 text-[20px]">
                 {blog.title}
               </h4>
               <p className="xl:w-[300px] mb-2">{blog.description}</p>
-              <button className="text-[#f9a826] font-semibold mb-3">
-                Read More..
-              </button>
+              <Link onClick={handleScroll} to={`/blogs/${blog.id}`}>
+                <button className="text-[#f9a826] font-semibold mb-3">
+                  Read More..
+                </button>
+              </Link>
               <div className="flex items-center gap-[50px] xl:gap-[30px] min-[320px]:gap-[25px] border-t-2">
                 <div className="flex items-center gap-1 pt-4 mb-2">
                   <FaUserCircle className="text-[#f9a826]" size={15} />

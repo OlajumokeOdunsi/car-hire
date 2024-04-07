@@ -3,8 +3,28 @@ import carData from "../../../assets/data/CarData";
 import { useParams } from "react-router-dom";
 import { IoIosStar } from "react-icons/io";
 import mastercard from "../../../assets/all-images/master-card.jpg";
+import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
+
 
 const CarsDetails = () => {
+  let menuRef = useRef();
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setShowNav(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
+  const handleScroll = () => {
+    scroll.scrollToTop();
+  };
+
   const { carId } = useParams();
   const cars = carData.find((car) => car.id === parseInt(carId));
   return (
@@ -178,6 +198,11 @@ const CarsDetails = () => {
             <button className="text-white bg-[#000d6b] px-3 py-1 rounded-md mt-3">
               Reserve Now
             </button>
+            <Link onClick={handleScroll} to={"/cars"}>
+              <button className="text-white bg-[#000d6b] px-3 py-1 rounded-md mt-3 ml-3">
+                Back to cars
+              </button>
+            </Link>
           </div>
         </div>
       </div>

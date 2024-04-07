@@ -8,7 +8,7 @@ import CarsIndex from "./pages/cars/CarsIndex";
 import BlogsIndex from "./pages/blogs/BlogsIndex";
 import ContactsIndex from "./pages/contacts/ContactsIndex";
 import CarsDetails from "./pages/cars/carsDetails/CarsDetails";
-
+import BlogDetails from "./pages/blogs/blogDetails/BlogDetails";
 
 function App() {
   return (
@@ -19,8 +19,9 @@ function App() {
           <Route path="/" element={<HomeIndex />} />
           <Route path="/about" element={<AboutIndex />} />
           <Route path="/cars" element={<CarsIndex />} />
-          <Route path="/cars/:carId" element={<CarsDetails/>}/>
+          <Route path="/cars/:carId" element={<CarsDetails />} />
           <Route path="/blogs" element={<BlogsIndex />} />
+          <Route path="/blogs/:blogId" element={<BlogDetails />} />
           <Route path="/contacts" element={<ContactsIndex />} />
         </Routes>
         <Footer />

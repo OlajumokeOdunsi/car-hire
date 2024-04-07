@@ -134,24 +134,36 @@ const Navbar = () => {
         className="nav_bottom xl:hidden flex items-center justify-between px-[80px] bg-[#000d6b] text-white h-[70px]"
       >
         <Link onClick={handleScroll} to={"/"}>
-          <h1 className="text-2xl absolute left-5 bottom-5">CarHire</h1>
+          <h1 className="xl:text-2xl text-xl absolute left-5 bottom-5">
+            CarHire
+          </h1>
         </Link>
         {showNav && (
           <ul className="flex items-center gap-6 absolute left-0 top-[50px] flex-col w-full h-auto bg-[#000d6b] py-5">
             <li>
-              <Link to={"/"}>Home</Link>
+              <Link onClick={handleScroll} to={"/"}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
+              <Link onClick={handleScroll} to={"/about"}>
+                About
+              </Link>
             </li>
             <li>
-              <Link to={"/cars"}>Cars</Link>
+              <Link onClick={handleScroll} to={"/cars"}>
+                Cars
+              </Link>
             </li>
             <li>
-              <Link to={"/blogs"}>Blogs</Link>
+              <Link onClick={handleScroll} to={"/blogs"}>
+                Blogs
+              </Link>
             </li>
             <li>
-              <Link to={"/contacts"}>Contacts</Link>
+              <Link onClick={handleScroll} to={"/contacts"}>
+                Contacts
+              </Link>
             </li>
 
             <span className="flex items-center bg-[#282d5ee9] px-3 py-2 rounded-full">

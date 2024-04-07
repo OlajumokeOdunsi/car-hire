@@ -3,6 +3,7 @@ import { IoCarSport } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 
+
 const Footer = () => {
   return (
     <div className="bg-[#000d6b] xl:px-[70px] px-6">

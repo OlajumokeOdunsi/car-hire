@@ -7,6 +7,7 @@ const HotOffer = () => {
   const handleScroll = () => {
     scroll.scrollToTop();
   };
+
   return (
     <div className="w-full xl:h-auto h-auto xl:px-[70px] px-6 pt-[40px] mb-[30px]">
       <div className="text-center mb-5">
@@ -48,9 +49,11 @@ const HotOffer = () => {
               </div>
             </div>
             <div className="flex items-center mt-5">
-              <button className="bg-[#000d6b] text-white px-4 py-[6px] w-full flex-1">
-                Rent
-              </button>
+              <Link onClick={handleScroll} to={`/cars/${car.id}`}>
+                <button className="bg-[#000d6b] text-white px-4 py-[6px] w-[140px] flex-1">
+                  Rent
+                </button>
+              </Link>
               <Link to={`/cars/${car.id}`} onClick={handleScroll}>
                 <button className="bg-[#f9a826] text-white px-4 py-[6px] w-[140px] flex-1">
                   Details

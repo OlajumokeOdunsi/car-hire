@@ -9,9 +9,13 @@ import avat2 from "../../../assets/all-images/ava-2.jpg";
 import avat3 from "../../../assets/all-images/ava-3.jpg";
 import avat4 from "../../../assets/all-images/ava-4.jpg";
 
+
 const Testimonials = () => {
   return (
-    <div className="w-full xl:h-[80vh] h-auto xl:px-[70px] px-5 text-white">
+    <div
+   
+      className="w-full xl:h-[80vh] h-auto xl:px-[70px] px-5 text-white"
+    >
       <div className="text-center">
         <h4 className="text-[#f9a826] font-semibold">Our Clients Says</h4>
         <h1 className="text-[#000d6b] font-semibold text-4xl">Testimonials</h1>

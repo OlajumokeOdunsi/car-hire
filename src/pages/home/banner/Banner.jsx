@@ -1,9 +1,13 @@
 import React from "react";
 import toyota from "../../../assets/all-images/cars-img/toyota-offer-2.png";
 
+
 const Banner = () => {
+
   return (
-    <div className="w-full xl:h-[60vh] h-auto bg-[#000d6b] overflow-hidden text-white flex flex-col xl:flex-row xl:gap-10 gap-4 xl:px-[70px] px-6 xl:mt-[70px] mb-[30px] pb-6">
+    <div
+      className="w-full xl:h-[60vh] h-auto bg-[#000d6b] overflow-hidden text-white flex flex-col xl:flex-row xl:gap-10 gap-4 xl:px-[70px] px-6 xl:mt-[70px] mb-[30px] pb-6"
+    >
       <div className="pt-[40px] min-[375px]:ml-[28px] xl:ml-0 min-[414px]:ml-[37px] min-[428px]:ml-[50px] min-[360px]:ml-[20px]">
         <img
           className="xl:w-[480px] min-[320px]:w-[280px] xl:shrink-0 bg-cover"

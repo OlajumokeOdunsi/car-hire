@@ -7,7 +7,9 @@ import { FaPhone } from "react-icons/fa";
 import Banner from "../home/banner/Banner";
 import Experts from "./experts/Experts";
 
+
 const AboutIndex = () => {
+
   return (
     <div className="w-full xl:mt-[180px] min-[320px]:mt-[70px]">
       <SliderBg title={"About"} />
