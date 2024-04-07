@@ -4,29 +4,15 @@ import { useParams } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoTimeSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import avat from "../../../assets/all-images/ava-1.jpg";
-import { useRef, useEffect } from "react";
-
 
 const BlogDetails = () => {
-  
-  let menuRef = useRef();
-  useEffect(() => {
-    let handler = (e) => {
-      if (!menuRef.current.contains(e.target)) {
-        setShowNav(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
-  });
-
   const handleScroll = () => {
     scroll.scrollToTop();
   };
+
+  let navigate = useNavigate();
 
   const { blogId } = useParams();
   const blogs = blogDataTwo.find((blog) => blog.id === parseInt(blogId));
@@ -111,8 +97,10 @@ const BlogDetails = () => {
             <button className="bg-[#000d6b] text-white py-2 px-3 rounded mt-4">
               Post a comment
             </button>
-            <Link onClick={handleScroll} to={"/blogs"}>
-              <button className="text-white bg-[#000d6b] px-3 py-2 rounded-md mt-3 ml-3">
+            <Link onClick={() => navigate(-1)}>
+              <button onClick={handleScroll}
+                className="text-white bg-[#000d6b] px-3 py-2 rounded-md mt-3 ml-3"
+              >
                 Back to blogs
               </button>
             </Link>

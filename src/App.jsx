@@ -9,6 +9,7 @@ import BlogsIndex from "./pages/blogs/BlogsIndex";
 import ContactsIndex from "./pages/contacts/ContactsIndex";
 import CarsDetails from "./pages/cars/carsDetails/CarsDetails";
 import BlogDetails from "./pages/blogs/blogDetails/BlogDetails";
+import NotFound from "./components/notFound/NotFound";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/blogs" element={<BlogsIndex />} />
           <Route path="/blogs/:blogId" element={<BlogDetails />} />
           <Route path="/contacts" element={<ContactsIndex />} />
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -4,21 +4,9 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoTimeSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { useRef, useEffect } from "react";
+
 
 const Blog = () => {
-  let menuRef = useRef();
-  useEffect(() => {
-    let handler = (e) => {
-      if (!menuRef.current.contains(e.target)) {
-        setShowNav(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
-  });
 
   const handleScroll = () => {
     scroll.scrollToTop();

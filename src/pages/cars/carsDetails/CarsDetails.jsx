@@ -3,30 +3,21 @@ import carData from "../../../assets/data/CarData";
 import { useParams } from "react-router-dom";
 import { IoIosStar } from "react-icons/io";
 import mastercard from "../../../assets/all-images/master-card.jpg";
-import { Link } from "react-router-dom";
-import { useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 
 
 const CarsDetails = () => {
-  let menuRef = useRef();
-  useEffect(() => {
-    let handler = (e) => {
-      if (!menuRef.current.contains(e.target)) {
-        setShowNav(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
-  });
 
   const handleScroll = () => {
     scroll.scrollToTop();
   };
 
+  let navigate = useNavigate();
+
   const { carId } = useParams();
   const cars = carData.find((car) => car.id === parseInt(carId));
+ 
   return (
     <div className="w-full h-auto xl:px-[70px] px-5 pt-[50px] mb-10 xl:mt-[180px] min-[320px]:mt-[70px]">
       <div className="flex flex-col xl:flex-row gap-5 w-full">
@@ -198,8 +189,10 @@ const CarsDetails = () => {
             <button className="text-white bg-[#000d6b] px-3 py-1 rounded-md mt-3">
               Reserve Now
             </button>
-            <Link onClick={handleScroll} to={"/cars"}>
-              <button className="text-white bg-[#000d6b] px-3 py-1 rounded-md mt-3 ml-3">
+            <Link onClick={() => navigate(-1)} to={"/cars"}>
+              <button onClick={handleScroll}
+                className="text-white bg-[#000d6b] px-3 py-1 rounded-md mt-3 ml-3"
+              >
                 Back to cars
               </button>
             </Link>
