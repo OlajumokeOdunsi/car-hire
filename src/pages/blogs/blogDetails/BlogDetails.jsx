@@ -5,6 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoTimeSharp } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import avat from "../../../assets/all-images/ava-1.jpg";
 
 const BlogDetails = () => {
@@ -97,8 +98,9 @@ const BlogDetails = () => {
             <button className="bg-[#000d6b] text-white py-2 px-3 rounded mt-4">
               Post a comment
             </button>
-            <Link onClick={() => navigate(-1)}>
-              <button onClick={handleScroll}
+            <Link to={"/blogs"}>
+              <button
+                onClick={handleScroll}
                 className="text-white bg-[#000d6b] px-3 py-2 rounded-md mt-3 ml-3"
               >
                 Back to blogs

@@ -4,11 +4,9 @@ import { useParams } from "react-router-dom";
 import { IoIosStar } from "react-icons/io";
 import mastercard from "../../../assets/all-images/master-card.jpg";
 import { Link, useNavigate } from "react-router-dom";
-
-
+import { animateScroll as scroll } from "react-scroll";
 
 const CarsDetails = () => {
-
   const handleScroll = () => {
     scroll.scrollToTop();
   };
@@ -17,7 +15,7 @@ const CarsDetails = () => {
 
   const { carId } = useParams();
   const cars = carData.find((car) => car.id === parseInt(carId));
- 
+
   return (
     <div className="w-full h-auto xl:px-[70px] px-5 pt-[50px] mb-10 xl:mt-[180px] min-[320px]:mt-[70px]">
       <div className="flex flex-col xl:flex-row gap-5 w-full">
@@ -189,8 +187,9 @@ const CarsDetails = () => {
             <button className="text-white bg-[#000d6b] px-3 py-1 rounded-md mt-3">
               Reserve Now
             </button>
-            <Link onClick={() => navigate(-1)} to={"/cars"}>
-              <button onClick={handleScroll}
+            <Link to={"/cars"}>
+              <button
+                onClick={handleScroll}
                 className="text-white bg-[#000d6b] px-3 py-1 rounded-md mt-3 ml-3"
               >
                 Back to cars
