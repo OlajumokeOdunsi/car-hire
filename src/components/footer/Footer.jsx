@@ -31,9 +31,9 @@ const Footer = () => {
         <div>
           <h4 className="mb-3 text-2xl font-semibold">Head Office</h4>
           <div className="flex flex-col gap-3">
-            <p>Ikeja, GRA, Ikeja Lagos state.</p>
-            <p>Phone: +23408108721330</p>
-            <p>Email: odedeakeem539@gmail.com</p>
+            <p>Yaba, Ebute metta Lagos state.</p>
+            <p>Phone: +2348093031532</p>
+            <p>Email: jumaiodunsi@gmail.com</p>
             <p>Openinh Hours: 9am - 6pm</p>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Footer = () => {
       <div className="text-center text-white border-t py-5">
         <p>
           &copy; copyright 2024, developed by{" "}
-          <span className="text-[#f9a826] ">Aknpg</span>. All Rights Reserved
+          <span className="text-[#f9a826] ">Olajumoke</span>. All Rights Reserved
         </p>
       </div>
     </div>

@@ -45,7 +45,7 @@ const Navbar = () => {
           <span>Need Help?</span>
           <span className="flex items-center gap-2">
             <FaPhone size={12} />
-            +23408108721330
+            +2348093031532
           </span>
         </div>
         <div className="flex items-center gap-4">
@@ -71,7 +71,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <FaLocationDot className="text-[#000d6b]" />
           <h3 className="text-[#000d6b] text-xl font-bold">Nigeria,</h3>
-          <p className="text-[#000d6b]">Ikeja, Lagos</p>
+          <p className="text-[#000d6b]">Yaba, Lagos</p>
         </div>
 
         <div className="flex items-center gap-3">

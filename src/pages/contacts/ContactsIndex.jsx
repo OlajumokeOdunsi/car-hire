@@ -53,14 +53,14 @@ const ContactsIndex = () => {
           <h4 className="text-[#000d6b] text-xl font-semibold mb-5">
             Contact Information
           </h4>
-          <p className="mb-3">124, Allen Avenue, Ikeja, Lagos.</p>
+          <p className="mb-3">67c Simpson by Adekunle Yaba Lagos.</p>
           <div className="flex items-center gap-2">
             <h6 className="text-[12px] font-bold text-[#000d6b]">Email:</h6>
-            <p>Odedeakeem539@gmail.com</p>
+            <p>jumaiodunsi@gmail.com</p>
           </div>
           <div className="flex items-center gap-2">
             <h6 className="text-[12px] font-bold text-[#000d6b]">Phone:</h6>
-            <p className="mb-3 pt-3">+23408108721330</p>
+            <p className="mb-3 pt-3">+2348093031532</p>
           </div>
           <h4 className="text-xl text-[#000d6b] font-bold mb-5">Follow Us:</h4>
           <div className="flex gap-5 text-xl text-[#000d6b]">
